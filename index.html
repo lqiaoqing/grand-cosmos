@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#000008" />
+  <meta name="description" content="恢宏宇宙 · 从地球到可观测宇宙边界的交互尺度之旅" />
+  <title>恢宏宇宙 · Grand Cosmos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="cosmos" aria-label="宇宙画布"></canvas>
+
+    <div id="vignette" aria-hidden="true"></div>
+
+    <header id="hud-top">
+      <div class="brand">
+        <span class="brand-mark">◎</span>
+        <span class="brand-title">恢宏宇宙</span>
+      </div>
+      <div id="scale-badge">
+        <div id="scale-name">地球</div>
+        <div id="scale-meta">
+          <span id="scale-dist">—</span>
+          <span class="sep">·</span>
+          <span id="scale-light">—</span>
+        </div>
+      </div>
+    </header>
+
+    <aside id="milestones" aria-label="尺度里程碑">
+      <div id="milestone-track"></div>
+    </aside>
+
+    <div id="hud-hint">滚轮缩放 · 拖拽漫游 · 双击聚焦</div>
+
+    <footer id="hud-bottom">
+      <button type="button" id="btn-tour" class="primary" title="自动漫游">开始宇宙之旅</button>
+      <button type="button" id="btn-home" title="回到地球附近">⊙ 回中</button>
+      <button type="button" id="btn-zoom-in" title="放大">＋</button>
+      <button type="button" id="btn-zoom-out" title="缩小">－</button>
+      <button type="button" id="btn-labels" class="on" title="开关标签">标签</button>
+      <div id="fps" aria-hidden="true"></div>
+    </footer>
+
+    <div id="focus-toast" hidden></div>
+  </div>
+
+  <noscript>请启用 JavaScript 以体验恢宏宇宙。</noscript>
+  <script src="cosmos.js"></script>
+</body>
+</html>
